@@ -17,15 +17,8 @@ function App() {
         >
           View Portfolio
         </button>
-        <div
-          className="canvas"
-          style={{
-            maxHeight: "678px",
-            maxWidth: "1080px",
-          }}
-        >
-          <MyThree />
-        </div>
+
+        <MyThree />
       </header>
     </div>
   );

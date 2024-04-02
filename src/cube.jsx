@@ -2,6 +2,7 @@ import * as THREE from "three";
 
 import { useEffect, useRef } from "react";
 
+// Then pass it to the renderer constructor
 function MyThree() {
   const refContainer = useRef();
   useEffect(() => {
@@ -13,6 +14,7 @@ function MyThree() {
       0.1,
       1000
     );
+
     var renderer = new THREE.WebGLRenderer();
     renderer.setSize(window.innerWidth, window.innerHeight);
     // document.body.appendChild( renderer.domElement );
