@@ -4,24 +4,33 @@ import viteLogo from "/vite.svg";
 import "./App.css";
 import MyThree from "./cube";
 
-function App() {
-  const [count, setCount] = useState(0);
+import { Component } from "react";
+import { Crisp } from "crisp-sdk-web";
 
-  return (
-    <div className="App">
-      <header className="App-header">
-        <h1>Sean Carroll</h1>
-        <p>Full Stack Developer</p>
-        <button
-          onClick={() => (window.location.href = "https://seanexperience.com")}
-        >
-          View Portfolio
-        </button>
+class App extends Component {
+  componentDidMount() {
+    Crisp.configure("7fa207c6-a4a7-4b2d-a001-a14f2088f8f9");
+  }
 
-        <MyThree />
-      </header>
-    </div>
-  );
+  render() {
+    return (
+      <div className="App">
+        <header className="App-header">
+          <h1>Sean Carroll</h1>
+          <p>Full Stack Developer</p>
+          <button
+            onClick={() =>
+              (window.location.href = "https://seanexperience.com")
+            }
+          >
+            View Portfolio
+          </button>
+
+          <MyThree />
+        </header>
+      </div>
+    );
+  }
 }
 
 export default App;
